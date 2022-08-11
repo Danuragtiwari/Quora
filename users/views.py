@@ -7,7 +7,7 @@ from django.contrib.auth.forms import UserCreationForm
 def logout_view(request):
     """Log the user out."""
     logout(request)
-    return HttpResponseRedirect(reverse('quora:index'))
+    return HttpResponseRedirect(reverse('app:index'))
 
 def register(request):
     """Register a new user."""
@@ -24,7 +24,7 @@ def register(request):
             authenticated_user = authenticate(username=new_user.username,
                 password=request.POST['password1'])
             login(request, authenticated_user)
-            return HttpResponseRedirect(reverse('quora:index'))
+            return HttpResponseRedirect(reverse('app:index'))
 
     context = {'form':form}
-    return render(request, 'users/register.html', context)
+    return render(request, 'app/register.html', context)
