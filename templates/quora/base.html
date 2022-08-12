@@ -1,5 +1,5 @@
 <p>
-    <a href="{% url 'app:index' %}">app</a>-
+    <a href="{% url 'app:index' %}">Users</a>-
     <a href="{% url 'app:tags' %}">Tags</a>
     {% if user.is_authenticated %}
         Hello, {{ user.username }}.
