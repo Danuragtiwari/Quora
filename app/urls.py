@@ -2,7 +2,7 @@
 from django.urls import include,path
 from . import views
 
-app_name = 'quora'
+app_name = 'app'
 
 urlpatterns = [
     # Home page

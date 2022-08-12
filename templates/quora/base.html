@@ -1,6 +1,6 @@
 <p>
-    <a href="{% url 'quora:index' %}">Quora</a>-
-    <a href="{% url 'quora:tags' %}">Tags</a>
+    <a href="{% url 'app:index' %}">app</a>-
+    <a href="{% url 'app:tags' %}">Tags</a>
     {% if user.is_authenticated %}
         Hello, {{ user.username }}.
         <a href="{% url 'users:logout' %}">log out</a>
