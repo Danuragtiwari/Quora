@@ -115,7 +115,7 @@ def answer_question(request, question_id):
             # change redirect page
             #return HttpResponseRedirect(reverse('quora:index'))
             return HttpResponseRedirect(reverse('quora:question',args=[question_id]))
-
+        
     context = {'question':question, 'form':form, 'tag':tag}
     return render(request, 'quora/answer_question.html', context)
 
