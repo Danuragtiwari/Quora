@@ -24,8 +24,8 @@ def register(request):
             authenticated_user = authenticate(username=new_user.username,
                 password=request.POST['password1'])
             login(request, authenticated_user)
-            return HttpResponseRedirect(reverse('app:index'))
-            # return redirect('app:index')
+            # return HttpResponseRedirect(reverse('app:index'))
+            return redirect('app:index')
         else:
             context = {'form':form}
             return render(request, 'app/register.html', context)
